@@ -35,6 +35,16 @@ url = http://obico-web.obico:3334   # in-cluster Obico server
 # auth_token = <set by the link step>
 ```
 
+If an H.264 RTSP stream already exists (go2rtc, camera-streamer), Janus can pull
+it directly. The agent then runs no ffmpeg and needs no hardware encoder:
+
+```ini
+[webcam]
+stream_mode = h264_rtsp
+h264_rtsp_url = rtsp://camera-host:8554/stream
+snapshot_url = http://camera-host:1984/api/frame.jpeg?src=stream
+```
+
 ## Run (container)
 
 1. Link the printer to the Obico server (writes `auth_token` into the cfg):

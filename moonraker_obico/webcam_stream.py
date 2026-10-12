@@ -247,6 +247,10 @@ class WebcamStreamer:
                  cur_port_num += 1
                  webcam.runtime['dataport'] = cur_port_num
                  cur_port_num += 1
+            elif webcam.streaming_params['mode'] == 'h264_rtsp':
+                 # Janus pulls the RTSP stream itself; only the data channel needs a port.
+                 webcam.runtime['dataport'] = cur_port_num
+                 cur_port_num += 1
             elif webcam.streaming_params['mode'] == 'mjpeg_webrtc':
                  webcam.runtime['mjpeg_dataport'] = cur_port_num
                  cur_port_num += 1

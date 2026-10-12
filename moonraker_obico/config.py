@@ -80,6 +80,7 @@ class WebcamConfig:
         self.stream_mode = self.webcam_config_section.get('stream_mode')
         self.h264_http_url = self.webcam_config_section.get('h264_http_url')
         self.h264_device_path = self.webcam_config_section.get('h264_device_path')
+        self.h264_rtsp_url = self.webcam_config_section.get('h264_rtsp_url')
 
     @property
     def is_nozzle_camera(self):

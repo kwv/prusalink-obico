@@ -21,6 +21,11 @@ disable_video_streaming = False
 # snapshot_url = http://127.0.0.1:8080/?action=snapshot
 # stream_url = http://127.0.0.1:8080/?action=stream
 # flip_h = False
+#
+# Let Janus pull an existing H.264 RTSP stream (e.g. go2rtc, camera-streamer)
+# instead of transcoding stream_url with ffmpeg:
+# stream_mode = h264_rtsp
+# h264_rtsp_url = rtsp://127.0.0.1:8554/stream.h264
 # flip_v = False
 # rotate_90 = False
 # aspect_ratio_169 = False
